@@ -167,8 +167,8 @@ export function LandingPageComponent() {
             <Card className="border-secondary bg-white">
               <CardContent className="p-6">
                 <p className="mb-4 italic text-gray-600">
-                  "The team at Rivonia Hair & Nail Care are true professionals.
-                  My hair has never looked better!"
+                  &quot;The team at Rivonia Hair & Nail Care are true
+                  professionals. My hair has never looked better!&quot;
                 </p>
                 <p className="font-semibold text-primary">- Sarah M.</p>
               </CardContent>
@@ -176,8 +176,8 @@ export function LandingPageComponent() {
             <Card className="border-secondary bg-white">
               <CardContent className="p-6">
                 <p className="mb-4 italic text-gray-600">
-                  "I love coming here for my regular manicures. The staff is
-                  friendly and the results are always perfect."
+                  &quot;I love coming here for my regular manicures. The staff
+                  is friendly and the results are always perfect.&quot;
                 </p>
                 <p className="font-semibold text-primary">- John D.</p>
               </CardContent>
