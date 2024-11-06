@@ -9,7 +9,6 @@ import {
   Users,
 } from "lucide-react"
 
-import { env } from "@/env.mjs"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import ContactSection from "@/app/(sections)/Contact"
@@ -17,9 +16,7 @@ import PortfolioSection from "@/app/(sections)/Portfolio"
 
 import FooterSection from "./Footer"
 import Header from "./Header"
-import CalendlyEmbed from "./ndx/calendly-embed"
 import BookingButton from "./ui/booking-button"
-import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog"
 
 export function LandingPageComponent() {
   return (
