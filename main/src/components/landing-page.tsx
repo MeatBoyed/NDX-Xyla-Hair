@@ -9,13 +9,17 @@ import {
   Users,
 } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { env } from "@/env.mjs"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import ContactSection from "@/app/(sections)/Contact"
 import PortfolioSection from "@/app/(sections)/Portfolio"
 
 import FooterSection from "./Footer"
 import Header from "./Header"
+import CalendlyEmbed from "./ndx/calendly-embed"
+import BookingButton from "./ui/booking-button"
+import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog"
 
 export function LandingPageComponent() {
   return (
@@ -44,16 +48,21 @@ export function LandingPageComponent() {
             installs, and nail treatments for both men and women.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button size="lg" className="">
-              Book your Appointment
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white bg-white/10 text-white hover:bg-gray-100"
+            <BookingButton>
+              <Button size="lg" className="">
+                Book your Appointment
+              </Button>
+            </BookingButton>
+            <Link
+              href="#services"
+              className={buttonVariants({
+                variant: "outline",
+                className:
+                  "border-white bg-white/10 text-white hover:bg-gray-100",
+              })}
             >
               Our Services
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -205,12 +214,14 @@ export function LandingPageComponent() {
           <p className="mb-8 text-xl text-white/90">
             Book your appointment now and experience the Rivonia difference!
           </p>
-          <Button
-            size="lg"
-            className="bg-white text-accent-foreground hover:bg-gray-100"
-          >
-            Book Your Appointment
-          </Button>
+          <BookingButton>
+            <Button
+              size="lg"
+              className="bg-white text-accent-foreground hover:bg-gray-100"
+            >
+              Book Your Appointment
+            </Button>
+          </BookingButton>
         </div>
       </section>
 
@@ -221,15 +232,17 @@ export function LandingPageComponent() {
       <FooterSection />
 
       {/* Hovering Booking Button */}
-      <div className="fixed bottom-4 left-4 z-50">
-        <Button
-          size="lg"
-          className="flex items-center space-x-2 rounded-full shadow-lg"
-          aria-label="Book an appointment"
-        >
-          <Calendar className="h-5 w-5" />
-          <span className="hidden sm:inline">Book online</span>
-        </Button>
+      <div className="fixed bottom-4 right-4 z-50">
+        <BookingButton>
+          <Button
+            size="lg"
+            className="flex items-center space-x-2 rounded-full shadow-lg"
+            aria-label="Book an appointment"
+          >
+            <Calendar className="h-5 w-5" />
+            <span className="hidden sm:inline">Book online</span>
+          </Button>
+        </BookingButton>
       </div>
     </div>
   )

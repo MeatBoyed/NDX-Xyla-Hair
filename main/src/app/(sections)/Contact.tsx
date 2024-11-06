@@ -1,5 +1,7 @@
+import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
 
+import { env } from "@/env.mjs"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -38,17 +40,30 @@ export default function ContactSection() {
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <MapPin className="text h-6 w-6" />
-                <p className="text-gray-600">
+                <Link
+                  href={env.NEXT_PUBLIC_MAPS_LINK}
+                  className="text-gray-600"
+                >
                   123 Rivonia Road, Sandton, Johannesburg
-                </p>
+                </Link>
               </div>
               <div className="flex items-center space-x-4">
                 <Phone className="text h-6 w-6" />
-                <p className="text-gray-600">+27 11 234 5678</p>
+                <Link
+                  href={`tel:${env.NEXT_PUBLIC_PHONE_NUMBER}`}
+                  className="text-gray-600"
+                >
+                  {env.NEXT_PUBLIC_PHONE_NUMBER}
+                </Link>
               </div>
               <div className="flex items-center space-x-4">
                 <Mail className="text h-6 w-6" />
-                <p className="text-gray-600">info@rivoniahairandnail.com</p>
+                <Link
+                  href={`mailto:${env.NEXT_PUBLIC_EMAIL}`}
+                  className="text-gray-600"
+                >
+                  {env.NEXT_PUBLIC_EMAIL}
+                </Link>
               </div>
             </div>
           </div>
