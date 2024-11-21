@@ -3,16 +3,20 @@ import {
   Award,
   Calendar,
   Clock,
+  icons,
   Palette,
   Scissors,
   Smile,
   Users,
+  Weight,
 } from "lucide-react"
 
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import ContactSection from "@/app/(sections)/Contact"
 import PortfolioSection from "@/app/(sections)/Portfolio"
+import ServiceCard from "@/app/(sections)/ServiceCard"
+import ServiceSection from "@/app/(sections)/Services"
 
 import FooterSection from "./Footer"
 import Header from "./Header"
@@ -37,7 +41,7 @@ export function LandingPageComponent() {
         </div>
         <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-6 text-center">
           <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">
-            Rivonia Hair & Nail Care
+            Rivonia Hair Salon & Nail Care
           </h1>
           <p className="mb-12 max-w-3xl text-xl text-white/90 md:text-2xl">
             Located in the heart of Rivonia, Johannesburg, we specialize in
@@ -70,92 +74,42 @@ export function LandingPageComponent() {
           <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Our Services
           </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <Card className="border-secondary bg-white">
-              <CardContent className="flex flex-col items-center p-6">
-                <Scissors className="text mb-4 h-12 w-12" />
-                <h3 className="mb-2 text-xl font-semibold text-primary">
-                  Hair Styling
-                </h3>
-                <p className="text-center text-gray-600">
-                  Professional hair styling services including cuts, coloring,
-                  and treatments.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-secondary bg-white">
-              <CardContent className="flex flex-col items-center p-6">
-                <Palette className="text mb-4 h-12 w-12" />
-                <h3 className="mb-2 text-xl font-semibold text-primary">
-                  Nail Care
-                </h3>
-                <p className="text-center text-gray-600">
-                  Manicures, pedicures, and nail art services for both men and
-                  women.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-secondary bg-white">
-              <CardContent className="flex flex-col items-center p-6">
-                <Clock className="text mb-4 h-12 w-12" />
-                <h3 className="mb-2 text-xl font-semibold text-primary">
-                  Quick Services
-                </h3>
-                <p className="text-center text-gray-600">
-                  Express treatments for those on a tight schedule.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+
+          <ServiceSection />
         </div>
       </section>
 
-      {/* About Us Section */}
+      {/* Why Choose Us Section */}
       <section id="about" className="bg-gray-100 py-16">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Why Choose Us
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <Card className="border-secondary bg-white">
-              <CardContent className="flex flex-col items-center p-6">
-                <Award className="text mb-4 h-12 w-12" />
-                <h3 className="mb-2 text-xl font-semibold text-primary">
-                  Expert Stylists
-                </h3>
-                <p className="text-center text-gray-600">
-                  Our team of skilled professionals has years of experience in
-                  hair and nail care, staying up-to-date with the latest trends
-                  and techniques.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-secondary bg-white">
-              <CardContent className="flex flex-col items-center p-6">
-                <Users className="text mb-4 h-12 w-12" />
-                <h3 className="mb-2 text-xl font-semibold text-primary">
-                  Personalized Service
-                </h3>
-                <p className="text-center text-gray-600">
-                  We take the time to understand your unique needs and
-                  preferences, ensuring a tailored experience that exceeds your
-                  expectations.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-secondary bg-white">
-              <CardContent className="flex flex-col items-center p-6">
-                <Smile className="text mb-4 h-12 w-12" />
-                <h3 className="mb-2 text-xl font-semibold text-primary">
-                  Welcoming Atmosphere
-                </h3>
-                <p className="text-center text-gray-600">
-                  Our friendly staff and comfortable salon create a warm,
-                  inviting environment where you can relax and enjoy your beauty
-                  treatment.
-                </p>
-              </CardContent>
-            </Card>
+            <ServiceCard
+              props={{
+                icon: Scissors,
+                title: "Expert Stylists",
+                description:
+                  "Our skilled stylists specialize in hair and nail care for all types, including black hair, dreadlocks, and braids. With years of experience, we stay ahead of the latest trends to deliver top-notch results tailored to your unique style.",
+              }}
+            />
+            <ServiceCard
+              props={{
+                icon: Scissors,
+                title: "Online Bookings",
+                description:
+                  "Book your next hair or nail appointment with ease! Our convenient online booking system, powered by Calendly, lets you schedule treatments at a time that suits you, ensuring a seamless salon experience.",
+              }}
+            />
+            <ServiceCard
+              props={{
+                icon: Scissors,
+                title: "Welcoming Atmosphere",
+                description:
+                  "Step into our Rivonia salon and feel at home. Our friendly staff creates a warm, relaxing environment where you can enjoy professional hair and nail treatments tailored for men, women, and kids.",
+              }}
+            />
           </div>
         </div>
       </section>
@@ -208,8 +162,10 @@ export function LandingPageComponent() {
           <h2 className="mb-4 text-3xl font-bold text-white">
             Ready to Transform Your Look?
           </h2>
-          <p className="mb-8 text-xl text-white/90">
-            Book your appointment now and experience the Rivonia difference!
+          <p className="mb-8 max-w-4xl  text-xl text-white/90">
+            Book your appointment today and experience expert hair and nail care
+            at Rivonia&apos;s trusted salon. Click below to schedule your visit
+            or walk in to enjoy our exceptional services!
           </p>
           <BookingButton>
             <Button

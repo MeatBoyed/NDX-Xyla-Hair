@@ -19,17 +19,17 @@ import { Button } from "./ui/button"
 export default function Header() {
   return (
     <header className="w-full border-b border-gray-200 bg-white px-6 py-4">
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 md:justify-start">
         <Link href="/" className="flex items-center space-x-2">
-          <Image
+          {/* <Image
             src="/placeholder.svg?height=48&width=48"
-            alt="Rivonia Hair & Nail Care"
+            alt="Rivonia Hair Salon & Nail Care"
             width={48}
             height={48}
             className="hidden h-12 w-12 md:flex"
-          />
+          /> */}
           <span className="text-xl font-bold text-primary">
-            Rivonia Hair & Nail Care
+            Rivonia Hair Salon & Nail Care
           </span>
         </Link>
         <nav className="hidden items-center space-x-8 md:flex">
@@ -70,7 +70,7 @@ export default function Header() {
           </DrawerTrigger>
           <DrawerContent>
             <DrawerHeader>
-              <DrawerTitle>Rivonia Hair & Nail Care</DrawerTitle>
+              <DrawerTitle>Rivonia Hair Salon & Nail Care</DrawerTitle>
               <DrawerDescription>Find us on Social Media</DrawerDescription>
               <div className="flex flex-col gap-4 py-5">
                 <Link

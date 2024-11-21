@@ -44,7 +44,7 @@ export default function ContactSection() {
                   href={env.NEXT_PUBLIC_MAPS_LINK}
                   className="text-gray-600"
                 >
-                  123 Rivonia Road, Sandton, Johannesburg
+                  {env.NEXT_PUBLIC_LOCATION}
                 </Link>
               </div>
               <div className="flex items-center space-x-4">
