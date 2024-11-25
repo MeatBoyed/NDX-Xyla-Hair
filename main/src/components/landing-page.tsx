@@ -15,6 +15,7 @@ import { Button, buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import ContactSection from "@/app/(sections)/Contact"
 import PortfolioSection from "@/app/(sections)/Portfolio"
+import PricingTable from "@/app/(sections)/PricingTable"
 import ServiceCard from "@/app/(sections)/ServiceCard"
 import ServiceSection from "@/app/(sections)/Services"
 
@@ -80,7 +81,7 @@ export function LandingPageComponent() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="about" className="bg-gray-100 py-16">
+      <section id="about" className="bg-gray-50 py-16">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Why Choose Us
@@ -116,6 +117,17 @@ export function LandingPageComponent() {
 
       {/* Portfolio */}
       <PortfolioSection />
+
+      {/* Why Choose Us Section */}
+      <section id="about" className="bg-gray-100 py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="mb-12 text-center text-3xl font-bold text-primary">
+            Pricing
+          </h2>
+
+          <PricingTable />
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <section id="testimonials" className="bg-gray-100/50 py-16">

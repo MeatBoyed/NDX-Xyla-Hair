@@ -180,3 +180,54 @@ export const jsonLd = {
   inLanguage: "en-ZA",
   isFamilyFriendly: "true",
 }
+
+export const PriceList = [
+  { name: "Hair Care", duration: "", price: "" },
+  { name: "Wash", duration: "15MIN", price: "R100" },
+  { name: "Undo", duration: "30MIN", price: "R50-R200" },
+  { name: "Relaxers", duration: "45MIN", price: "R150-R250" },
+
+  { name: "Cornrows & Braiding", duration: "", price: "" },
+  {
+    name: "Tribal Cornrows (Shoulder Length)",
+    duration: "1HR 30MIN",
+    price: "R500",
+  },
+  { name: "Tribal Cornrows (Bra Length)", duration: "2HR", price: "R550" },
+  {
+    name: "Tribal Cornrows (Wrist Length)",
+    duration: "2HR 30MIN",
+    price: "R650",
+  },
+  { name: "Tribal Cornrows (Bum Length)", duration: "3HR", price: "R700" },
+  { name: "Thin Cornrows", duration: "3HR", price: "R750-R850" },
+  { name: "Extra Length (Cornrows)", duration: "30MIN", price: "R100" },
+  { name: "Beads", duration: "30MIN", price: "R100-R200" },
+  { name: "Butterfly Braids (Short)", duration: "2HR 30MIN", price: "R900" },
+  { name: "Butterfly Braids (Long)", duration: "3HR 30MIN", price: "R1200" },
+  { name: "Box Braids (Normal Size)", duration: "3HR", price: "R650-R950" },
+  {
+    name: "Knotless Braids (Normal Size)",
+    duration: "3HR",
+    price: "R650-R950",
+  },
+  { name: "Locks Braids (All Sizes)", duration: "4HR", price: "R950-R1600" },
+
+  { name: "Styling & Dreadlocks", duration: "", price: "" },
+  { name: "Gel Pondo (Short)", duration: "1HR", price: "R400" },
+  { name: "Gel Pondo (Medium)", duration: "1HR 30MIN", price: "R550" },
+  { name: "Gel Pondo (Long)", duration: "2HR", price: "R650" },
+  {
+    name: "Dreadlock Twisting & Styling",
+    duration: "1HR 30MIN",
+    price: "R550",
+  },
+  { name: "Crotchet Dreadlocks", duration: "2HR", price: "R650" },
+  { name: "Weaves and Wig Installations", duration: "1HR", price: "R450" },
+
+  { name: "Nails & Beauty", duration: "", price: "" },
+  { name: "Glish", duration: "30MIN", price: "R250" },
+  { name: "Pedicure", duration: "45MIN", price: "R300" },
+  { name: "Manicure", duration: "45MIN", price: "R280" },
+  { name: "Nail Art", duration: "1HR", price: "R450" },
+]
