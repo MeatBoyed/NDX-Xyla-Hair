@@ -93,11 +93,6 @@ export default function PricingTable() {
               </TableCell>
             </TableRow>
           ))}
-          <TableHead className="flex w-full items-center justify-center">
-            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-              Hair Care
-            </h4>
-          </TableHead>
         </TableBody>
       </Table>
     </div>
