@@ -33,6 +33,26 @@ export const ImageStore = {
       src: "wig-locks.webp",
       url: getImageUrl("wig-locks.webp"),
     },
+    {
+      alt: "Wig installation and make up at Rivonia Hair Salon & Nail Care",
+      src: "wig+installation+and+make+up.webp",
+      url: getImageUrl("wig+installation+and+make+up.webp"),
+    },
+    {
+      alt: "Complex patterns for braids installation at Rivonia Hair Salon & Nail Care",
+      src: "complex+patterns+for+braids+installation.webp",
+      url: getImageUrl("complex+patterns+for+braids+installation.webp"),
+    },
+    {
+      alt: "Hair installing and make up at Rivonia Hair Salon & Nail Care",
+      src: "hair+installing+and+make+up.webp",
+      url: getImageUrl("hair+installing+and+make+up.webp"),
+    },
+    {
+      alt: "Hair wig installation and relaxing at Rivonia Hair Salon & Nail Care",
+      src: "hair+wig+installation+and+relaxing.webp",
+      url: getImageUrl("hair+wig+installation+and+relaxing.webp"),
+    },
   ],
 }
 
