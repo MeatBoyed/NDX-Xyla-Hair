@@ -11,6 +11,7 @@ import {
   Weight,
 } from "lucide-react"
 
+import { ImageStore } from "@/lib/ImageStore"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import ContactSection from "@/app/(sections)/Contact"
@@ -34,8 +35,7 @@ export function LandingPageComponent() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             // backgroundImage: "url('/placeholder.svg?height=600&width=1200')",
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+            backgroundImage: `url(${ImageStore.bannerBg.url})`,
           }}
         >
           <div className="absolute inset-0 bg-black/40" />
@@ -164,8 +164,7 @@ export function LandingPageComponent() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             // backgroundImage: "url('/placeholder.svg?height=600&width=1200')",
-            backgroundImage:
-              "url('https://images.unsplash.com/flagged/photo-1580820258381-20c91a156841?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+            backgroundImage: `url(${ImageStore.ctaBg.url})`,
           }}
         >
           <div className="absolute inset-0 bg-black/40" />

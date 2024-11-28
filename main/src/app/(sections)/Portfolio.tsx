@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 
+import { getImageUrl, ImageStore } from "@/lib/ImageStore"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
 export default function PortfolioSection() {
@@ -27,10 +28,10 @@ export default function PortfolioSection() {
             Our Best Works
           </h2>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-            {portfolioItems.map((item, index) => (
+            {ImageStore.gallery.map((item, index) => (
               <div key={index} className="relative aspect-square bg-gray-100">
                 <Image
-                  src={item.src}
+                  src={item.url}
                   alt={item.alt}
                   layout="fill"
                   objectFit="cover"
